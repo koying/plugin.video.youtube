@@ -436,3 +436,8 @@ msgstr ""
 msgctxt "#30549"
 msgid "No videos streams found"
 msgstr ""
+
+msgctxt "#30550"
+msgid "Recommendations"
+msgstr ""
+
