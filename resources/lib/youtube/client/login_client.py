@@ -56,9 +56,9 @@ class LoginClient(object):
         },
         'youtube-for-kodi-16': {
             'system': 'Jarvis',
-            'key': 'AIzaSyBbgC4PZ2_hUdqqX7MIgdg2fK1nohv1jrw',
-            'id': '17932591024-8jruv1v7s78gipo7s17c91bnk26rqgpf.apps.googleusercontent.com',
-            'secret': 'bK9T234WWhqzYdcQLif1L35K'
+            'key': 'AIzaSyAb27K8eMR9ysX2-sdE7TqVADV1wpJC0Es',
+            'id': '348423189006-rpgeltdbe7tf9rtj7rs2c14md67cqgd3.apps.googleusercontent.com',
+            'secret': 'jbJEvwaKrjucp_JJjE1iPLV3'
         }
     }
 
