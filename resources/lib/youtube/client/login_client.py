@@ -11,24 +11,24 @@ class LoginClient(object):
     CONFIGS = {
         'youtube-tv': {
             'system': 'All',
-            'key': 'AIzaSyD8FKpmgjsIbJvP9LIOj3Vau4PMTmIBoWY',
-            'id': '348423189006-54gt2i60pmkfpgunb60lbq015g5uanjv.apps.googleusercontent.com',
-            'secret': 'Yqmhr6MFTScST_1Hbs2zfFiP'
+            'key': 'AIzaSyAd-YEOqZz9nXVzGtn3KWzYLbLaajhqIDA',
+            'id': '861556708454-d6dlm3lh05idd8npek18k6be8ba3oc68.apps.googleusercontent.com',
+            'secret': 'SboVhoG9s0rNafixCSGGKXAT'
         },
         # API KEY for search and channel infos. These should work most of the time without login to safe some quota
         'youtube-for-kodi-quota': {
             'token-allowed': False,
             'system': 'All',
-            'key': 'AIzaSyDfiWr6wAw4ddvR35_UW5lmUGxcPR1XubQ',
-            'id': '348423189006-9bu0pmhpgachc20kee1tgggnjlndjuma.apps.googleusercontent.com',
-            'secret': 'nyTdpZwxTJRIS2gIt_LotasS'
+            'key': 'AIzaSyA7v1QOHz8Q4my5J8uGSpr0zRrntRjnMmk',
+            'id': '597640352045-7um2gr1v5rgobm5bf07ebesm3er48286.apps.googleusercontent.com',
+            'secret': 'VmyQ12KkJ_N3yegu4Y-VGCXd'
         },
         'youtube-for-kodi-fallback': {
             'token-allowed': False,
             'system': 'Fallback!',
-            'key': 'AIzaSyBkvnHMvZdjKuthxzlqeNV8UCf7F1UoSak',
-            'id': '348423189006-sit9ubkr2abctvvnk98h20bbgt8ok07i.apps.googleusercontent.com',
-            'secret': '9c-PDMVtqJbEYBUpTAhZ1MuK'
+            'key': 'AIzaSyBEvxICg_E5g8mfndYjWHH4WEDF2fN_zXM',
+            'id': '705000440035-f7v8mhn75udt6l20r75ko7f15c39ns1c.apps.googleusercontent.com',
+            'secret': 'XeLKD8o_mdzEBDy9Nw5KMKbr'
         },
         'youtube-for-kodi-12': {
             'system': 'Frodo',
@@ -56,44 +56,11 @@ class LoginClient(object):
         },
         'youtube-for-kodi-16': {
             'system': 'Jarvis',
-            'key': 'AIzaSyBnwFzpBZG1rDP6yNlbqsRT_7jjqJlffjY',
-            'id': '348423189006-kou5f5eo21fnvibs21ffhdldbl1hkjf4.apps.googleusercontent.com',
-            'secret': 'vIb7l5ser_sLpfZPciOeEK8a'
+            'key': 'AIzaSyBbgC4PZ2_hUdqqX7MIgdg2fK1nohv1jrw',
+            'id': '17932591024-8jruv1v7s78gipo7s17c91bnk26rqgpf.apps.googleusercontent.com',
+            'secret': 'bK9T234WWhqzYdcQLif1L35K'
         }
     }
-
-    CREDENTIALS_POOL = [
-        {
-            'system': 'Kodi YouTube Pool 1',
-            'key': 'AIzaSyBF1pAv5HrwetDXqrszEN76hGYQaGe4hfs',
-            'id': '348423189006-04n209e9gioat31q6k2rcq2ufqtkl2vi.apps.googleusercontent.com',
-            'secret': 'ziJOpj0JWlpckSDfXPDqGczB'
-        },
-        {
-            'system': 'Kodi YouTube Pool 2',
-            'key': 'AIzaSyA6DTVr_GGA27fXpSXS--M-AKJgO940bFM',
-            'id': '348423189006-jqdm0kbj14b0nv2n3cvo0e6ic8m4klht.apps.googleusercontent.com',
-            'secret': 'O7YsJaUFohpoODD1WfhDrl_r'
-        },
-        {
-            'system': 'Kodi YouTube Pool 3',
-            'key': 'AIzaSyBLFXdPPentnoTg0Eonc63iqVPwOpmXoZU',
-            'id': '348423189006-h1a87iubll14hdmmqcheom81pfhv3d24.apps.googleusercontent.com',
-            'secret': 'Dqi7t3g7ioubFP1Fj0R3_sHw'
-        },
-        {
-            'system': 'Kodi YouTube Pool 4',
-            'key': 'AIzaSyCd0XCLZrSnqMqFdDGYRay2nwG8Cqx2X38',
-            'id': '348423189006-ldr2ciujfe5mp53ogenob5u6bigqc9fr.apps.googleusercontent.com',
-            'secret': 'uzTAeGOxFl8hNH5qA68DDdsj'
-        },
-        {
-            'system': 'Kodi YouTube Pool 5',
-            'key': 'AIzaSyAAHqKWm1JzSMqRuPTbJtfXYmMgM_Ocqy8',
-            'id': '348423189006-cb3q64gnf40mcif6h6v6nqldmj76qrsq.apps.googleusercontent.com',
-            'secret': 'j7m5cmclGNakjhcVRIPWE61L'
-        }
-    ]
 
     def __init__(self, config={}, language='en-US', access_token='', access_token_tv=''):
         if not config:
