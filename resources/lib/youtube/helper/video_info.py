@@ -318,7 +318,14 @@ class VideoInfo(object):
         '251': {'container': 'webm',
                 'dash/audio': True,
                 'audio': {'bitrate': 160, 'encoding': 'opus'}},
-    }
+        # === Dash Manifest
+        'dashmpd': {'container': 'dash',
+                'Live': True,
+                'title': 'DASH',
+                'sort': [2160, 0],
+                'video': {'height': 2160, 'encoding': 'h.264'},
+                'audio': {'bitrate': 128, 'encoding': 'aac'}},
+     }
 
     def __init__(self, context, access_token='', language='en-US'):
         self._context = context
@@ -521,14 +528,6 @@ class VideoInfo(object):
                    'Accept-Language': 'en-US,en;q=0.8,de;q=0.6'}
         params = {'video_id': video_id,
                   'hl': self._language,
-                  'ps': 'leanback',
-                  'el': 'leanback',
-                  'width': '1920',
-                  'height': '1080',
-                  'ssl_stream': '1',
-                  'c': 'TVHTML5',
-                  'cver': '4',
-                  'cplayer': 'UNIPLAYER',
                   'cbr': 'Chrome',
                   'cbrver': '40.0.2214.115',
                   'cos': 'Windows',
@@ -601,6 +600,15 @@ class VideoInfo(object):
         """
 
         # extract streams from map
+        dash_manifest = urllib.unquote(params.get('dashmpd', ''))
+        if dash_manifest:
+	  self._context.log_debug('>>> MPD manifest: "%s"' % dash_manifest)
+	  video_stream = {'url': dash_manifest,
+			  'meta': meta_info}
+	  yt_format = self.FORMAT.get("dashmpd", None)
+	  video_stream.update(yt_format)
+	  stream_list.append(video_stream)
+
         url_encoded_fmt_stream_map = params.get('url_encoded_fmt_stream_map', '')
         if url_encoded_fmt_stream_map:
             url_encoded_fmt_stream_map = url_encoded_fmt_stream_map.split(',')

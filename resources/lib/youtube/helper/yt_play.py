@@ -20,7 +20,15 @@ def play_video(provider, context, re_match):
             context.get_ui().show_notification(message, time_milliseconds=5000)
             return False
 
-        video_stream = kodion.utils.select_stream(context, video_streams)
+	video_stream = None
+        for v in video_streams:
+	  if v["container"] == "dash":
+	    video_stream = v
+	    break
+	  pass
+	
+        if video_stream is None:
+	  video_stream = kodion.utils.select_stream(context, video_streams)
 
         if video_stream is None:
             return False
